@@ -6,20 +6,20 @@ on:
       KERNEL_REPO:
         description: 'KERNEL_REPO'
         required: true
-        default: 'https://github.com/cly-build/kernel_xiaomi_vayu.git'
+        default: 'https://github.com/rama982/kernel_xiaomi_rosemary.git'
       KERNEL_BRANCH:
         description: 'KERNEL_BRANCH'
         required: true
-        default: 'tiramisu'
+        default: 'R'
       KERNEL_DEFCONFIG:
         description: 'KERNEL_DEFCONFIG'
         required: true
-        default: 'vayu_defconfig'
+        default: 'rosemary_defconfig'
 
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
